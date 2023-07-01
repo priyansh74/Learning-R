@@ -2,6 +2,7 @@ import { CDN_URL } from "../utils/constant";
 
 
 const RestaurantCard = (props) => {
+    //resData is my attribute name passed to resCard from Body component
     const {resData} = props;
     const{
         cloudinaryImageId,

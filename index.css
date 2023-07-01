@@ -4,7 +4,7 @@
     border: 1px solid black;
 }
 .logo{
-    width: 150px;
+    width: 200px;
 }
 
 .nav-items{
@@ -23,11 +23,12 @@
 .res-container{
     display: flex;
     flex-wrap: wrap;
+    
 }
 .res-card{
-    margin: 5px;
-    padding: 5px;
-    width: 200px;
+    margin: 10px;
+    padding: 6px;
+    width: 180px;
     
     background-color: #f0f0f0;
 }
@@ -40,4 +41,58 @@
 }
 .res-logo{
     width: 100%;  
+}
+
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    margin:20px;
+    width: 200px;
+    height: 400px;
+    background-color: #f0f0f0;
+}
+.login{
+   
+    background-color: #fbeee0;
+  border: 2px solid #422800;
+  border-radius: 30px;
+  box-shadow: #422800 4px 4px 0 0;
+  color: #422800;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  touch-action: manipulation;
+
+
+}
+
+.login:hover {
+  background-color: #fff;
+}
+
+.login:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+.filter{
+  display: flex;
+}
+
+.user-card{
+    padding: 10px;
+    border: 1px solid black;
 }
