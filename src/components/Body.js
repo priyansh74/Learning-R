@@ -3,6 +3,7 @@ import RestaurantCard from "./RestaurantCard.js";
 import Shimmer from "./Shimmer.js";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 
 const Body = () => {
@@ -26,8 +27,11 @@ const Body = () => {
       setListofRestrautant(json?.data?.cards[2]?.data?.data?.cards); //optional chaining to not get short ckt but get undefined if wrong
       setFilteredRestaurant(json?.data?.cards[2]?.data?.data?.cards);
     }
+    
+    const onlineStatus = useOnlineStatus(); //custom hook
 
-
+    if(onlineStatus === false) return <h1>Looks like you are offline!! Please check you internet connection</h1>
+   
     //ternary operator for implementing conditional rendering, when no data to shimmer after fetching return the real component
     return listofRestrautants.length === 0 ? <Shimmer/> : ( 
         <div className="body">
